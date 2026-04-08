@@ -1,0 +1,212 @@
+:root {
+    --naranja-vibrante: #D35400;
+    --naranja-fondo: #F27131;
+    --naranja-tarjeta: #F7B184;
+    --azul-oscuro: #1A3A5A;
+    --blanco-puro: #FFFFFF;
+    --gris-input: #F2F2F2;
+    --melocoton-suave: #F5B08F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--naranja-fondo);
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 10px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+.nav-btn.active {
+    background-color: var(--blanco-puro);
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.nav-btn:hover:not(.active) {
+    background-color: var(--blanco-puro);
+    border-radius: 10px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.nav-btn.active:hover() {
+    cursor: pointer;
+}
+
+/* Botón Salir */
+.btn-salir {
+    background-color: #E0E0E0;
+    border: 1.5px solid #000;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Título Principal */
+h1 {
+    color: var(--blanco-puro);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- Contenedor de Controles (Inputs y Botones) --- */
+.controls-card {
+    background-color: var(--naranja-tarjeta);
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 40px;
+    /* Siguiendo la estética redondeada */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    min-width: 280px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 2px solid var(--azul-oscuro);
+    background-color: var(--gris-input);
+    font-size: 1rem;
+    color: var(--naranja-fondo);
+    outline: none;
+}
+
+input::placeholder {
+    color: var(--naranja-fondo);
+    opacity: 0.6;
+}
+
+button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: 2px solid #000;
+    background-color: var(--naranja-fondo);
+    color: var(--blanco-puro);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--azul-oscuro);
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background-color: #ccc;
+    border-color: #999;
+    cursor: not-allowed;
+}
+
+/* --- Contenedor de la Tabla --- */
+.table-wrapper {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--blanco-puro);
+    border-radius: 30px;
+    overflow: hidden;
+    /* Para que los bordes redondeados corten la tabla */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco-puro);
+}
+
+th {
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 18px;
+    text-align: center;
+    color: var(--azul-oscuro);
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- Sección de Respuesta de Gemini --- */
+#respuestaText {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--azul-oscuro);
+    color: var(--blanco-puro);
+    padding: 25px;
+    border-radius: 30px;
+    border-left: 10px solid var(--naranja-tarjeta);
+    animation: fadeIn 0.5s ease-in;
+}
+
+#respuestaText h3 {
+    color: var(--naranja-tarjeta);
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
