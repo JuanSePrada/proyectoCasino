@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CasinoApp - Home</title>
+    <link rel="stylesheet" href="css/style_home.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo-bubble">
+            <div class="logo-text">
+                <span class="go">Go</span><span class="ticket">Ticket</span>
+            </div>
+            <p class="tagline">A un click de la Euforia</p>
+        </div>
+
+        <nav class="nav-menu">
+            <button class="nav-btn active" data-target="maquinas.html">Maquinaria</button>
+            <button class="nav-btn" data-target="alimentos.html">Alimentos & Bebidas</button>
+            <button class="nav-btn" data-target="clientes.html">Clientes</button>
+            <button class="nav-btn" data-target="intercambiomonedas.html">Cambio Moneda/Cliente</button>
+        </nav>
+
+        <div>
+            <span id="username" class="nav-username"></span>
+        </div>
+
+        <button class="btn-salir" id="btnLogout">Salir ➔</button>
+    </header>
+
+    <main class="content-area">
+        <div class="divider"></div>
+        <div class="divider"></div>
+    </main>
+
+    <script type="module" src="scripts/home.js"></script>
+</body>
+
+</html>

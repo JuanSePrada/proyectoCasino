@@ -1,0 +1,111 @@
+:root {
+    --naranja-vibrante: #D35400;
+    /* Fondo principal */
+    --melocoton-suave: #F5B08F;
+    /* Burbuja logo y franjas */
+    --azul-oscuro: #1A2B48;
+    /* Texto "Ticket" */
+    --blanco-puro: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Narrow', sans-serif;
+}
+
+body {
+    background-color: var(--naranja-vibrante);
+    min-height: 100vh;
+}
+
+/* Encabezado */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+/* Burbuja del Logo */
+.logo-bubble {
+    background-color: var(--melocoton-suave);
+    padding: 10px 25px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo-text .go {
+    color: #00A3FF;
+}
+
+.logo-text .ticket {
+    color: var(--azul-oscuro);
+}
+
+.tagline {
+    font-size: 11px;
+    color: var(--azul-oscuro);
+    margin-top: -5px;
+}
+
+/* Menú de Botones */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-username {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+.nav-btn.active {
+    background-color: var(--blanco-puro);
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+/* Botón Salir */
+.btn-salir {
+    background-color: #E0E0E0;
+    border: 1.5px solid #000;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Franjas decorativas del mockup */
+.content-area {
+    margin-top: 50px;
+}
+
+.divider {
+    height: 25px;
+    background-color: var(--melocoton-suave);
+    margin-bottom: 200px;
+    width: 100%;
+}
