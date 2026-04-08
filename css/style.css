@@ -1,0 +1,136 @@
+/* Reset general para eliminar márgenes del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Puedes usar 'Montserrat' para un look más moderno */
+}
+
+body {
+    background-color: #F27131; /* Naranja vibrante del fondo exterior */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal (La tarjeta clara) */
+.login-card {
+    background-color: #F7B184; /* Naranja pastel de la tarjeta */
+    width: 90%;
+    max-width: 600px;
+    padding: 60px 40px;
+    border-radius: 60px; /* Bordes muy redondeados como en el mockup */
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del Logo */
+.logo-container {
+    margin-bottom: 30px;
+}
+
+/* --- Actualizaciones para el Icono de Idioma --- */
+.lang-header {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Centrar verticalmente icono y texto */
+    gap: 10px;
+}
+
+/* Controlar el tamaño del icono del mundo */
+.world-icon {
+    width: 25px;  /* Ajusta este tamaño según tu mockup */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* --- Actualizaciones para el Logo Principal --- */
+.logo-container {
+    margin-bottom: 30px;
+}
+
+/* Controlar el tamaño del logo principal */
+.main-logo {
+    width: 350px; /* Ajusta este ancho según el mockup */
+    height: auto;  /* Mantiene la proporción */
+    margin-bottom: 5px; /* Pequeño espacio antes del tagline */
+}
+
+/* El rayo o icono central */
+.logo-icon {
+    color: #F27131;
+    font-size: 4.5rem;
+}
+
+.tagline {
+    color: #1A3A5A;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+/* Inputs (Usuario y Contraseña) */
+.input-container {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    max-width: 280px;
+    padding: 15px;
+    border-radius: 30px; /* Forma de píldora */
+    border: 1.5px solid #000;
+    background-color: #F2F2F2;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #F27131; /* Texto naranja dentro del input */
+    outline: none;
+}
+
+input::placeholder {
+    color: #F27131;
+    opacity: 0.8;
+}
+
+/* Botón Ingresar */
+#btnIngresar {
+    width: 100%;
+    max-width: 280px;
+    padding: 15px;
+    border-radius: 30px;
+    border: 1.5px solid #000;
+    background-color: #F27131; /* Naranja fuerte */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#btnIngresar:hover {
+    background-color: #D65A1E;
+}
+
+/* Mensajes de error o éxito */
+#resultados {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #1A3A5A;
+}
+
+/* Selector de Idioma (Arriba a la derecha) */
+.lang-header {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
