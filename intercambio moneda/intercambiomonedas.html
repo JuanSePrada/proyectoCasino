@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CasinoAPP - Intercambio de Monedas</title>
+    <link rel="stylesheet" href="css/style_intercambio.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <nav class="nav-menu">
+            <button class="nav-btn" data-target="maquinas.html">Maquinaria</button>
+            <button class="nav-btn" data-target="alimentos.html">Alimentos & Bebidas</button>
+            <button class="nav-btn" data-target="clientes.html">Clientes</button>
+            <button class="nav-btn active" data-target="intercambiomonedas.html">Cambio Moneda/Cliente</button>
+        </nav>
+
+    </header>
+
+    <h1>Intercambio de Monedas</h1>
+
+    <div class="main-container">
+
+        <div class="controls-group">
+            <button id="btnConsultar">Cargar Datos</button>
+            <input type="text" id="txtPregunta" placeholder="Ingresa tu pregunta..." disabled>
+            <button id="btnAnalizar" disabled>Analizar con Gemini</button>
+        </div>
+
+        <div>
+            <div class="table-wrapper">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Nombre de Cliente</th>
+                            <th>Tipo de Cambio</th>
+                            <th>Cantidad</th>
+                            <th>Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="respuestaText" style="display:none;">
+            <h3>Análisis de Gemini:</h3>
+            <p id="responseText"></p>
+        </div>
+
+    </div>
+    <script type="module" src="scripts/intercambiomonedas.js"></script>
+
+</body>
+
+</html>
